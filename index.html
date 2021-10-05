@@ -74,6 +74,23 @@ height: 1000px;
   return start2 + (end2 - start2) * ((value - start1) / (end1 - start1));
 }
 
+if(y < 0){
+console.log("0!!!!!!!!!!!!!");
+
+//　マイナススクロールに合わせて、ロゴ文字サイズを６４ー128の中で変わる。
+var logo_size = map(y, -1, -50, 64, 128);
+var logo_top = map(y, -1, -50, 100, 149);
+//現在のロゴサイズを指定しているクラスの情報を取得
+var topbar_logo = document.getElementById("topbar_bk");
+//その情報の中のスタイルシートのフォントサイズを上で求めた文字サイズにする
+topbar_logo.style.fontSize = logo_size+"px";
+topbar_logo.style.top = logo_top+"px";
+
+// var topbar = document.getElementById("topbar");
+// topbar.style.height = bar_height+"px";
+
+}
+
 if(y < 100 ){
 //スクロール100になったら戻す　＝remove
 console.log("100以下！")

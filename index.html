@@ -23,7 +23,7 @@ body {
   line-height: 250px;
 }
 
-.topbar_bk{
+.topbar_logo{
 position: fixed;
 width: 100%;
 top: 200px;
@@ -41,7 +41,7 @@ height: 1000px;
 </head>
 <body>
 <div id="topbar" class="topbar"></div>
-<div id="topbar_bk" class="topbar_bk"><h1>LLOOGGOO</h1></div>
+<div id="topbar_logo" class="topbar_logo"><h1>LLOOGGOO</h1></div>
 <div class="next">スクロールした<span id="scroll">0</span></div>
 <script>
   window.addEventListener('load',(event) =>{
@@ -59,7 +59,7 @@ if(y < 0){
 var logo_size = map(y, -1, -50, 64, 128);
 var logo_top = map(y, -1, -50, 200, 249);
 //現在のロゴサイズを指定しているクラスの情報を取得
-var topbar_logo = document.getElementById("topbar_bk");
+var topbar_logo = document.getElementById("topbar_logo");
 //その情報の中のスタイルシートのフォントサイズを上で求めた文字サイズにする
 topbar_logo.style.fontSize = logo_size+"px";
 topbar_logo.style.top = logo_top+"px";
@@ -70,7 +70,7 @@ else if(y == 0){
     // スクロール0のときはデフォルトバーの高さ300pxに直す
     var topbar = document.getElementById("topbar");
 topbar.style.height = "300px";
-var topbar_logo = document.getElementById("topbar_bk");
+var topbar_logo = document.getElementById("topbar_logo");
 //その情報の中のスタイルシートのフォントサイズを上で求めた文字サイズにする
 topbar_logo.style.fontSize = "64px";
 topbar_logo.style.top = "200px";
@@ -84,7 +84,7 @@ var bar_height = 300-y;
 var logo_size = map(bar_height, 100, 300, 16, 64);
 var logo_top = map(bar_height, 100, 300, 24, 200);
 //現在のロゴサイズを指定しているクラスの情報を取得
-var topbar_logo = document.getElementById("topbar_bk");
+var topbar_logo = document.getElementById("topbar_logo");
 //その情報の中のスタイルシートのフォントサイズを上で求めた文字サイズにする
 topbar_logo.style.fontSize = logo_size+"px";
 topbar_logo.style.top = logo_top+"px";
